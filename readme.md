@@ -1,4 +1,5 @@
 # Three.js Journey
+# Animated Galaxy:
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
