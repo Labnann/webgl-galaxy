@@ -1,4 +1,4 @@
-import './style.css'
+
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
@@ -11,8 +11,13 @@ import galaxyFragmentShader from './shaders/galaxy/fragment.glsl';
 // Debug
 const gui = new dat.GUI()
 
+const canvas = document.createElement("canvas");
+canvas.style.cssText = " overflow:hidden; position:fixed; height: 100%; width: 100%; ";
+
+document.getElementById("root").prepend(canvas);
+
 // Canvas
-const canvas = document.querySelector('canvas.webgl')
+// const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
@@ -28,8 +33,8 @@ parameters.branches = 3
 parameters.spin = 1
 parameters.randomness = 0.5
 parameters.randomnessPower = 3
-parameters.insideColor = '#ff6030'
-parameters.outsideColor = '#1b3984'
+parameters.insideColor = '#d0d324'
+parameters.outsideColor = '#2647bc'
 
 let geometry = null
 let material = null
